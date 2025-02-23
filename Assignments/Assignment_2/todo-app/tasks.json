@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "title": "study ejs",
+    "description": "ejs if-else statement \r\nuse of foreach loop",
+    "completed": false
+  },
+  {
+    "id": 2,
+    "title": "javascript",
+    "description": "callback, callback hell, promises ,async function",
+    "completed": false
+  }
+]

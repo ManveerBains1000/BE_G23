@@ -1,0 +1,2 @@
+views - runs on client side run on browser;
+server.js - server side (Node environment);
