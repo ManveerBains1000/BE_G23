@@ -4,9 +4,9 @@ const path = require("path");
 const app = express();
 const PORT = 3000;
 
-app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json()); 
 app.use(express.static('public')); 
+app.use(express.urlencoded({ extended: true }));
 app.use((req, res, next) => {
     console.log(`${new Date} ${req.method} ${req.url}`);
     next();
@@ -46,7 +46,7 @@ app.post("/add-task", (req, res) => {
   };
   tasks.push(newTask);
   fs.writeFileSync("tasks.json", JSON.stringify(tasks, null, 2));
-  res.redirect("/tasks.ejs");
+  res.redirect("/tasks");
 });
 
 app.listen(PORT, () => {
